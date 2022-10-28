@@ -7,7 +7,7 @@ import (
 )
 
 func SetHeading() []string {
-	headings := []string{"DATE", "AWS SERVICES", "COSTn(in $ )"}
+	headings := []string{"DATE", "AWS SERVICES", "COST(in $ )"}
 
 	return headings
 }
