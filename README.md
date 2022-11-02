@@ -1,28 +1,64 @@
-# AWS_bILLING_TFT_GOLANG
-we need to install golang in our system
-need code editor (prefer VS code)
+# backend
+Backend service of AWS Billing Automation
 
-install AWS CLI by given commands if used ubuntu os (snap apt -get aws cli)
+# Build Status
+
+[![Build Status](https://github.com/javed-tft/aws-billing-app.git)
+
+# Development setup
+
+To run the script, it takes nothing more than:
+
+  - Bash
+  - Go
+  - AWS CLI
+  
+
+
+## HowTo
+### Configure the AWS CLI 
+
+ ```bash
+   -- open a terminal and hit command: aws configure
+   -- set credentials like access key, secret key, region, output format etc.
+   -- choose region ap-south-1 because the service charged is less for this region.
+
+### Run the Application
+- Open the terminal from root folder
+- hit command `cd cmd` then `go run main.go`
+
+
+
+### Run Tests
+```bash
+- hit command `go test`
+
+
+
+for this app...
+
+You need to install golang in your system
+need code editer (i'm prefer VS code)
+
+install AWS CLI
 configure credential
             -- open terminal and hit commond: aws configure
             -- set credential like, access key, secret key, region, output format etc.
             -- choose region ap-south-1 because service charged is less for this region.
 
-in the AWSCOSTAPI app...
-we have used several function each and every function used through main
+in the AWS Billing app...
+we(peers) have used several function
 
-The function in the file is getDate(), it returns range of date in format YY-MM-DD
+The function getDate(), it returns range of date in the format YY-MM-DD
 
-The function GetAwsCost() is where we request the information to AWS, we give the details related to what is needed,
-
+The function GetAwsCost() is where we request the information to AWS, this function gives aws servises cost.
 we set the level of granularity (daily) or Monthly or yearly as per our requirement.
 
-create a file then store in CSV.
+create a file and store in CSV.
 CSV was chosen for ease of use, almost every spreadsheet program can open those and if not the we processed with a simple text file
 
+The main function is where we use the AWS CLI library, for executing commands, and calling functions
 
-The main function is where we use the CLI library, for executing commands, and calling functions
-
-after all..
-hit command go run main.go under cmd folder
+after all done.....
+hit the command go run main.go
 it will genrate a csv file and you simply open it in spreadsheet
